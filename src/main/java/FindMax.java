@@ -1,9 +1,10 @@
 package com.generictest;
 
-public class FindMax {
-	//Function for Integer maximum Value
-	public Integer checkMax(Integer firstValue, Integer secondValue, Integer thirdValue) {
-		Integer max = firstValue;
+public class FindMax<T extends Comparable<T>> {
+
+	// Function for check All type of Maximum values
+	public static <T extends Comparable> T checkMax(T firstValue, T secondValue, T thirdValue) {
+		T max = firstValue;
 		if (secondValue.compareTo(max) > 0) {
 			max = secondValue;
 		}
@@ -12,29 +13,4 @@ public class FindMax {
 		}
 		return max;
 	}
-
-	//Function for check Maximum float value
-	public Float checkMax(Float firstValue, Float secondValue, Float thirdValue) {
-		Float max = firstValue;
-		if (secondValue.compareTo(max) > 0) {
-			max = secondValue;
-		}
-		if (thirdValue.compareTo(max) > 0) {
-			max = thirdValue;
-		}
-		return max;
-	}
-
-	 //Function for check Maximum float value
-        public String checkMax(Float firstValue, Float secondValue, Float thirdV>
-                String max = firstValue;
-                if (secondValue.compareTo(max) > 0) {
-                        max = secondValue;
-                }
-                if (thirdValue.compareTo(max) > 0) {
-                        max = thirdValue;
-                }
-                return max;
-        }
-
 }
