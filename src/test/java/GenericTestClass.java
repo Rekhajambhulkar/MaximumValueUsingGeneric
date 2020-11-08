@@ -170,5 +170,13 @@ public class GenericTestClass {
 		String max = (String) main.checkMaxValue();
 		Assert.assertNotEquals(thirdValue, max);
 	}
-	
+
+	// Test case for All type of data
+	@Test
+	public void checkMaxTrue() {
+		Integer firstValue = 30, secondValue = 10, thirdValue = 26;
+		FindMax main = new FindMax(30, 10, 26);
+		Comparable max = main.checkMaxValue();
+		Assert.assertEquals(30, max);
+	}
 }
