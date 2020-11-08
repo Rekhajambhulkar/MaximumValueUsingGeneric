@@ -24,4 +24,17 @@ public class FindMax {
 		}
 		return max;
 	}
+
+	 //Function for check Maximum float value
+        public String checkMax(Float firstValue, Float secondValue, Float thirdV>
+                String max = firstValue;
+                if (secondValue.compareTo(max) > 0) {
+                        max = secondValue;
+                }
+                if (thirdValue.compareTo(max) > 0) {
+                        max = thirdValue;
+                }
+                return max;
+        }
+
 }

@@ -116,4 +116,59 @@ public class GenericTestClass {
                 Float max = main.checkFloatmax(firstValue, secondValue, thirdVa>
                 Assert.assertNotEquals(thirdValue, max);
         }
+
+	// Test case for greatest String FirstValue True
+	@Test
+	public void FirstMaximumStringValue_FirstPositionTrue() {
+		String firstValue = "Peach", secondValue = "Apple", thirdValue = "Banana";
+		FindMax main = new FindMax<String>(firstValue, secondValue, thirdValue);
+		String max = (String) main.checkMaxValue();
+		Assert.assertEquals(firstValue, max);
+	}
+
+	// Test case for greatest String FirstValue False
+	@Test
+	public void FirstMaximumStringValue_FirstPositionFalse() {
+		String firstValue = "Apple", secondValue = "Peach", thirdValue = "Banana";
+		FindMax main = new FindMax(firstValue, secondValue, thirdValue);
+		String max = (String) main.checkMaxValue();
+		Assert.assertNotEquals(firstValue, max);
+	}
+
+	// Test case for greatest String Second True
+	@Test
+	public void secondMaximumStringValue_SecondtPositionTrue() {
+		String firstValue = "Banana", secondValue = "Peach", thirdValue = "Apple";
+		FindMax<String> main = new FindMax<String>(firstValue, secondValue, thirdValue);
+		Comparable max = main.checkMaxValue();
+		Assert.assertEquals(secondValue, max);
+	}
+
+	// Test case for greatest String Second False
+	@Test
+	public void secondMaximumStringValue_SecondtPositionFalse() {
+		String firstValue = "Banana", secondValue = "Apple", thirdValue = "Peach";
+		FindMax main = new FindMax(firstValue, secondValue, thirdValue);
+		Comparable max = main.checkMaxValue();
+		Assert.assertNotEquals(secondValue, max);
+	}
+
+	// Test case for greatest String ThirdValue True
+	@Test
+	public void thirdMaximumStringValue_ThirdPositionTrue() {
+		String firstValue = "Banana", secondValue = "Apple", thirdValue = "Peach";
+		FindMax main = new FindMax(firstValue, secondValue, thirdValue);
+		String max = (String) main.checkMaxValue();
+		Assert.assertEquals(thirdValue, max);
+	}
+
+	// Test case for greatest String ThirdValue False
+	@Test
+	public void thirdMaximumStringValue_ThirdPositionFalse() {
+		String firstValue = "Banana", secondValue = "Peach", thirdValue = "Apple";
+		FindMax main = new FindMax(firstValue, secondValue, thirdValue);
+		String max = (String) main.checkMaxValue();
+		Assert.assertNotEquals(thirdValue, max);
+	}
+	
 }
