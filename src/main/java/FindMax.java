@@ -18,6 +18,11 @@ public class FindMax<T extends Comparable<T>> {
 	}
 
 	private static <T extends Comparable> T checkMaxValue(T[] value, T max) {		
+		System.out.println("Max of");
+		for (T values : value) {
+			System.out.println(values + " ");
+		}
+		System.out.println("is" + max);
 		return max;
 	}
 
